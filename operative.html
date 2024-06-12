@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Name - Agent de terrain</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <h1>Agent de terrain</h1>
+    <p>Voici la grille :</p>
+    <div id="grid"></div>
+    <a href="index.html" class="button">Retour</a>
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('grid');
+            // Génération de la grille pour les agents de terrain
+            for (let i = 0; i < 25; i++) {
+                const cell = document.createElement('div');
+                cell.className = 'cell operative';
+                cell.innerText = `Mot ${i + 1}`; // Remplacez ceci par les mots réels
+                grid.appendChild(cell);
+            }
+        });
+    </script>
+</body>
+</html>
+

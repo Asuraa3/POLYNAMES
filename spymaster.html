@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Name - Maître-espion</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <h1>Maître-espion</h1>
+    <p>Voici votre grille :</p>
+    <div id="grid"></div>
+    <a href="index.html" class="button">Retour</a>
+    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('grid');
+            // Génération de la grille pour le maître-espion
+            for (let i = 0; i < 25; i++) {
+                const cell = document.createElement('div');
+                cell.className = 'cell spymaster';
+                cell.innerText = `Mot ${i + 1}`; // Remplacez ceci par les mots et couleurs réels
+                grid.appendChild(cell);
+            }
+        });
+    </script>
+</body>
+</html>
