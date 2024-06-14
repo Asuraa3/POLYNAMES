@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maitre des mots</title>
-    <link rel="stylesheet" href="style2.css">
+    <title>Maitre de l'intuition </title>
+    <link rel="stylesheet" href="spymaster.css">
 </head>
 <body>
-<h1>Maitre des mots</h1>
+<img src="spymaster.png" alt="" class="logo">
+<h1>Maitre de l'intuition </h1>
 <p id="username-display"></p>
 <p>Voici la grille :</p>
 
@@ -16,7 +17,6 @@
 <script>
     const urlParams = new URLSearchParams(window.location.search);
     const username = urlParams.get('username');
-    document.getElementById('username-display').innerText = 'Joueur: ' + username;
 
     document.addEventListener('DOMContentLoaded', () => {
         const grid = document.getElementById('grid');
@@ -32,6 +32,7 @@
                     const cell = document.createElement('div');
                     cell.className = 'cell';
                     cell.innerText = mot.texteMot;
+
                     grid.appendChild(cell);
                 });
             })
@@ -39,14 +40,6 @@
                 console.error('Error fetching cartes:', error);
             });
 
-
-        indiceInput.addEventListener('input', () => {
-            console.log('Indice:', indiceInput.value);
-        });
-
-        indiceCount.addEventListener('change', () => {
-            console.log('Nombre de mots correspondant:', indiceCount.value);
-        });
     });
 </script>
 </body>

@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opératif</title>
-    <link rel="stylesheet" href="style2.css">
+    <title>Maitre des mots</title>
+    <link rel="stylesheet" href="operative.css">
 </head>
 <body>
+<img src="operative.png" alt="" class="logo">
+
 <h1>Maître des mots</h1>
 <p>Voici la grille :</p>
 <div id="indice-container" class="indice-container">
@@ -44,6 +46,8 @@
                     const cell = document.createElement('div');
                     cell.className = 'cell';
                     cell.innerText = mot.texteMot;
+
+
                     grid.appendChild(cell);
                 });
             })
